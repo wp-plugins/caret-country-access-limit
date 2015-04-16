@@ -4,7 +4,7 @@ Plugin Name: Caret Country Access Limit
 Plugin URI: http://www.ca-ret.co.jp/WordPress/
 Description: APNICなどの機関で公開されているIPアドレスの一覧を自動取得し、.htaccessによるアクセス制限を国単位で行います。
 Author: Caret Inc.
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://www.ca-ret.co.jp/
 License: GPL2
 */
@@ -89,7 +89,7 @@ class countryLimitSetupClass
 
 	function setupSave()
 	{
-		$config_tmp = WP_PLUGIN_DIR."/CaretCountryAccessLimit/_config.php";
+		$config_tmp = dirname(__FILE__)."/_config.php";
 
 		$this->setupValid();
 

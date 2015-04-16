@@ -8,9 +8,9 @@
 			<?php endif; ?>
 			<ul style="list-style-type:decimal;margin-left:16px;font-size:12px;">
 			<li style="margin:2px 0;">このプラグインはAPNICなどの機関で公開されているIPアドレスの一覧を取得し、<strong style="color:#0000ff;">「.htaccess」</strong>によるアクセス制限を国単位で行います</li>
-			<li style="margin:2px 0;">IPアドレス一覧の自動更新は<strong style="color:#0000ff;">「wp-cron.php」</strong>を使用します。「wp-cron.php」を使用しない場合はcronに<strong style="color:#0000ff;">「php WordPressのroot/wp-content/plugins/CaretCountryAccessLimit/batch.php 1 &gt; /dev/null 2>&amp;1」</strong>を登録することで自動更新が可能です</li>
-			<li style="margin:2px 0;">このプラグインはディレクトリ<strong style="color:#0000ff;">「WordPressのroot」「wp-content」「wp-content/plugins/CaretCountryAccessLimit」</strong>に対して書込み権限が必要となります</li>
-			<li style="margin:2px 0;">このプラグインをFTPなどでアップロードした場合は<strong style="color:#0000ff;">「wp-content/plugins/CaretCountryAccessLimit/batch.php」</strong>対して実行権限が必要となる場合があります</li>
+			<li style="margin:2px 0;">IPアドレス一覧の自動更新は<strong style="color:#0000ff;">「wp-cron.php」</strong>を使用します。「wp-cron.php」を使用しない場合はcronに<strong style="color:#0000ff;">「php <?php echo dirname(__FILE__); ?>/batch.php 1 &gt; /dev/null 2>&amp;1」</strong>を登録することで自動更新が可能です</li>
+			<li style="margin:2px 0;">このプラグインはディレクトリ<strong style="color:#0000ff;">「WordPressのroot」「wp-content」「<?php echo dirname(__FILE__); ?>」</strong>に対して書込み権限が必要となります</li>
+			<li style="margin:2px 0;">このプラグインをFTPなどでアップロードした場合は<strong style="color:#0000ff;">「<?php echo dirname(__FILE__); ?>/batch.php」</strong>対して実行権限が必要となる場合があります</li>
 			<li style="margin:2px 0;">「上記の国からのアクセス時の処理」で<strong style="color:#0000ff;">「許可する」</strong>を選択した場合は<strong style="color:#0000ff;">「プライベートアドレス 」「ループバックアドレス」</strong>が自動的に追加されます</li>
 			<li style="margin:2px 0;">「アクセスを拒否(又は許可)する国の2文字の国コード」「上記の国以外でアクセスを拒否(又は許可)するIPアドレス」は<strong style="color:#0000ff;">1件ごとに改行</strong>してください</li>
 			<li style="margin:2px 0;">万が一アクセスできなくなった場合は、FTPクライアントなどでWordPressのrootディレクトリに移動し、<strong style="color:#0000ff;">バックアップ「.htaccess_country_limit_org」を「.htaccess」にリネーム</strong>するか<strong style="color:#0000ff;">「.htaccess」を削除</strong>してください</li>
